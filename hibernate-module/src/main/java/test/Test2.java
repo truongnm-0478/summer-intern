@@ -22,13 +22,17 @@ public class Test2 {
             // Tạo một phòng ban mới
             Department department = new Department();
             department.setName("IT");
-            session.save(department);
 
             // Tạo một nhân viên mới thuộc về phòng ban IT
-            Employee employee = new Employee();
-            employee.setName("Ngo Mau Truong");
-            employee.setDepartment(department);
-            session.save(employee);
+            Employee employee1 = new Employee();
+            employee1.setName("Nguyen Gia Bao");
+            department.addEmployee(employee1);
+
+            Employee employee2 = new Employee();
+            employee2.setName("Nguyen Duc Dung");
+            department.addEmployee(employee2);
+
+            session.save(department);
 
             transaction.commit();
         } catch (Exception e) {
