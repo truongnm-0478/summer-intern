@@ -23,7 +23,7 @@ public class DemoController {
     @Autowired
     private RequestBean requestBean;
 
-    @RequestMapping(value ={ "/demo"}, method = RequestMethod.GET)
+    @RequestMapping(value = "/demo", method = RequestMethod.GET)
     public String demoPage(Model model, HttpServletRequest httpRequest) {
         // Set values for beans
         applicationBean.setValue("Application Scoped Bean Value");

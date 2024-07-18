@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Spring MVC Demo</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+<h1>Spring MVC Demo Page</h1>
+<h2>Application Scoped Bean</h2>
+<p th:text="${applicationBean.value}"></p>
+
+<h2>Session Scoped Bean</h2>
+<p th:text="${sessionBean.value}"></p>
+
+<h2>Request Scoped Bean</h2>
+<p th:text="${requestBean.value}"></p>
+</body>
+</html>
